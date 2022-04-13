@@ -12,7 +12,25 @@
     </extensions>
 
     <applicationListeners>
+
         <listener class="com.github.leifzhang.ideaplugindemo.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+
+    <actions>
+        <action id="com.github.leifzhang.ideaplugindemo.InputDialog"
+                class="com.github.leifzhang.ideaplugindemo.InputDialog"
+                text="InputDialog"
+                description="Test input dialog">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <add-to-group group-id="ToolbarRunGroup" anchor="after" relative-to-action="RunnerActions"/>
+        </action>
+        <action id="NotificationTest"
+                class="com.github.leifzhang.ideaplugindemo.NotificationTest"
+                text="NotificationTest"
+                description="Test notification">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+
 </idea-plugin>
