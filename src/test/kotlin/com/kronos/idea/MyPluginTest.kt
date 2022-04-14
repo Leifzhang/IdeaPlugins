@@ -1,4 +1,4 @@
-package com.github.leifzhang.ideaplugindemo
+package com.kronos.idea
 
 import com.intellij.ide.highlighter.XmlFileType
 import com.intellij.psi.xml.XmlFile

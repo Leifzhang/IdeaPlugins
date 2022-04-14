@@ -7,29 +7,23 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.leifzhang.ideaplugindemo.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.leifzhang.ideaplugindemo.services.MyProjectService"/>
+        <applicationService serviceImplementation="com.kronos.idea.services.MyApplicationService"/>
+        <projectService serviceImplementation="com.kronos.idea.services.MyProjectService"/>
     </extensions>
 
     <applicationListeners>
 
-        <listener class="com.github.leifzhang.ideaplugindemo.listeners.MyProjectManagerListener"
+        <listener class="com.kronos.idea.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 
     <actions>
-        <action id="com.github.leifzhang.ideaplugindemo.InputDialog"
-                class="com.github.leifzhang.ideaplugindemo.InputDialog"
+        <action id="com.kronos.idea.AppkeyAction"
+                class="com.kronos.idea.AppkeyAction"
                 text="InputDialog"
                 description="Test input dialog">
             <add-to-group group-id="MainMenu" anchor="last"/>
             <add-to-group group-id="ToolbarRunGroup" anchor="after" relative-to-action="RunnerActions"/>
-        </action>
-        <action id="NotificationTest"
-                class="com.github.leifzhang.ideaplugindemo.NotificationTest"
-                text="NotificationTest"
-                description="Test notification">
-            <add-to-group group-id="ToolsMenu" anchor="last"/>
         </action>
     </actions>
 

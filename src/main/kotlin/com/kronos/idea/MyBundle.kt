@@ -1,4 +1,4 @@
-package com.github.leifzhang.ideaplugindemo
+package com.kronos.idea
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls
