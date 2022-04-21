@@ -18,12 +18,19 @@
     </applicationListeners>
 
     <actions>
-        <action id="com.kronos.idea.AppkeyAction"
+        <action id="AppkeyAction"
                 class="com.kronos.idea.AppkeyAction"
-                text="InputDialog"
-                description="Test input dialog">
+                text="切换apk"
+                description="大仓切换不同apk">
             <add-to-group group-id="MainMenu" anchor="last"/>
             <add-to-group group-id="ToolbarRunGroup" anchor="after" relative-to-action="RunnerActions"/>
+        </action>
+        <action id="ReInvAction"
+                class="com.kronos.idea.ReInvAction"
+                text="切换apk"
+                description="大仓切换不同apk">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <add-to-group group-id="ToolbarRunGroup" anchor="after" relative-to-action="AppkeyAction"/>
         </action>
     </actions>
 

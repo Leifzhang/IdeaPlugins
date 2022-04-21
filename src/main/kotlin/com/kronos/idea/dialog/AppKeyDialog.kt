@@ -3,18 +3,16 @@ package com.kronos.idea.dialog
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
 
-import com.intellij.openapi.ui.DialogWrapper.DialogWrapperAction
 import com.kronos.idea.entity.AppKeyEntity
 import com.kronos.idea.entity.getAppKeyList
 import com.kronos.idea.utils.FileUtils
 import org.jdesktop.swingx.JXComboBox
 import java.awt.BorderLayout
-import java.awt.event.ActionEvent
 import java.io.File
 import java.util.*
 import javax.swing.*
 
-class TestDialog(val project: Project) : DialogWrapper(true) {
+class AppKeyDialog(val project: Project) : DialogWrapper(true) {
 
     private var appKeyList: MutableList<AppKeyEntity> = mutableListOf()
 
