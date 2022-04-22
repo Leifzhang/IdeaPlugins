@@ -1,9 +1,9 @@
-package com.github.leifzhang.ideaplugindemo.listeners
+package com.kronos.idea.listeners
 
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManagerListener
-import com.github.leifzhang.ideaplugindemo.services.MyProjectService
+import com.kronos.idea.services.MyProjectService
 
 internal class MyProjectManagerListener : ProjectManagerListener {
 

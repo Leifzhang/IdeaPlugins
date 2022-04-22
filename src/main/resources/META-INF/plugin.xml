@@ -7,12 +7,31 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.leifzhang.ideaplugindemo.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.leifzhang.ideaplugindemo.services.MyProjectService"/>
+        <applicationService serviceImplementation="com.kronos.idea.services.MyApplicationService"/>
+        <projectService serviceImplementation="com.kronos.idea.services.MyProjectService"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.leifzhang.ideaplugindemo.listeners.MyProjectManagerListener"
+
+        <listener class="com.kronos.idea.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+
+    <actions>
+        <action id="AppkeyAction"
+                class="com.kronos.idea.AppkeyAction"
+                text="切换apk"
+                description="大仓切换不同apk">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <add-to-group group-id="ToolbarRunGroup" anchor="after" relative-to-action="RunnerActions"/>
+        </action>
+        <action id="ReInvAction"
+                class="com.kronos.idea.ReInvAction"
+                text="切换apk"
+                description="大仓切换不同apk">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <add-to-group group-id="ToolbarRunGroup" anchor="after" relative-to-action="AppkeyAction"/>
+        </action>
+    </actions>
+
 </idea-plugin>

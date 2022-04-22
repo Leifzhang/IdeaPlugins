@@ -1,6 +1,6 @@
-package com.github.leifzhang.ideaplugindemo.services
+package com.kronos.idea.services
 
-import com.github.leifzhang.ideaplugindemo.MyBundle
+import com.kronos.idea.MyBundle
 
 class MyApplicationService {
 

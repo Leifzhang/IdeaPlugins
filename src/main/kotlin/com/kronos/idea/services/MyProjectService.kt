@@ -1,7 +1,7 @@
-package com.github.leifzhang.ideaplugindemo.services
+package com.kronos.idea.services
 
 import com.intellij.openapi.project.Project
-import com.github.leifzhang.ideaplugindemo.MyBundle
+import com.kronos.idea.MyBundle
 
 class MyProjectService(project: Project) {
 
